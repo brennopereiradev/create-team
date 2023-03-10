@@ -1,9 +1,13 @@
+.button-area{
+    width: 100%;
+    text-align: center;
+}
 .button{
-    background-color: #6278f7;
+    background-color: #8a5841;
     border-radius: 10px;
     font-weight: 700;
-    font-size: 18px;
-    padding: 32px;
+    font-size: 1.8rem;
+    padding: 1rem;
     border: none;
     cursor: pointer;
     color:#fff;

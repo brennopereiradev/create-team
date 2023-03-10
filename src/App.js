@@ -41,25 +41,27 @@ function App() {
 
   const addedNewUser = (user) => {
     //debugger
-    setUsers([...users, user])
+    setUsers([...users, user]);
   };
 
   return (
-    <div className="App">
-      <Banner />
-      <Form
-        teams={teams.map((team) => team.name)}
-        registeredUser={(user) => addedNewUser(user)}
-      />
-      {teams.map((team) => (
-        <Team
-          key={team.name}
-          name={team.name}
-          primaryColor={team.primaryColor}
-          secondaryColor={team.secondaryColor}
-          users={users.filter(user => user.team === team.name) }
+    <div className="container-fluid">
+      <div className="App">
+        <Banner />
+        <Form
+          teams={teams.map((team) => team.name)}
+          registeredUser={(user) => addedNewUser(user)}
         />
-      ))}
+        {teams.map((team) => (
+          <Team
+            key={team.name}
+            name={team.name}
+            primaryColor={team.primaryColor}
+            secondaryColor={team.secondaryColor}
+            users={users.filter((user) => user.team === team.name)}
+          />
+        ))}
+      </div>
     </div>
   );
 }

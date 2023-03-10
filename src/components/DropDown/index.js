@@ -5,7 +5,7 @@ const Dropdown = (props) => {
     <div className="drop-down">
       <label>{props.label}</label>
       <select onChange={event => props.onUpdate(event.target.value)} required = {props.required} value={props.value} >
-      <option value="">Select</option>
+      <option value="">Select Your Team</option>
         {props.item.map(item => <option key={item} >{item}</option>)}
       </select>
     </div>
